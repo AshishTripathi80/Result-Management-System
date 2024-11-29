@@ -1,0 +1,13 @@
+<div class="result-container" *ngIf="result">
+    <h2>Result</h2>
+    <p><strong>Roll Number:</strong> {{ result.rollNumber }}</p>
+    <p><strong>Name:</strong> {{ result.name }}</p>
+    <p><strong>Date of Birth:</strong> {{ result.dob }}</p>
+    <p><strong>Marks:</strong> {{ result.marks }}</p>
+    <button class="btn btn-secondary" routerLink="/student">Logout</button>
+  </div>
+  
+  <div *ngIf="!result">
+    <p>Loading...</p>
+  </div>
+  

@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "id": "b1a5",
+      "rollNumber": "1",
+      "dob": "1998-09-13",
+      "name": "Ashish Tripathi",
+      "marks": 99
+    },
+    {
+      "rollNumber": "11",
+      "dob": "1998-10-13",
+      "name": "Ekta Dubey",
+      "marks": 33,
+      "id": "6175"
+    }
+  ]
+}

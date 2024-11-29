@@ -1,0 +1,39 @@
+<div class="student-container">
+    <h2>Student Dashboard</h2>
+  
+    <form [formGroup]="studentLoginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="rollNumber">Roll Number</label>
+        <input
+          type="text"
+          id="rollNumber"
+          class="form-control"
+          formControlName="rollNumber"
+          placeholder="Enter Roll Number"
+        />
+        <small *ngIf="studentLoginForm.controls['rollNumber'].invalid && studentLoginForm.controls['rollNumber'].touched">
+          Roll number is required.
+        </small>
+      </div>
+  
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input
+          type="date"
+          id="dob"
+          class="form-control"
+          formControlName="dob"
+        />
+        <small *ngIf="studentLoginForm.controls['dob'].invalid && studentLoginForm.controls['dob'].touched">
+          Date of Birth is required.
+        </small>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="studentLoginForm.invalid">View Result</button>
+    </form>
+  
+    <div *ngIf="errorMessage" class="error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>
+  

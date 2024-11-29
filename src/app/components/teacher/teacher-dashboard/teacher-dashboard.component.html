@@ -1,0 +1,45 @@
+<div class="dashboard-container">
+    <button
+      class="btn btn-primary add-record-button"
+      routerLink="/teacher/add-result"
+    >
+      Add Record
+    </button>
+  
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Roll Number</th>
+          <th>Date of Birth</th>
+          <th>Name</th>
+          <th>Marks</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let result of results; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ result.rollNumber }}</td>
+          <td>{{ result.dob }}</td>
+          <td>{{ result.name }}</td>
+          <td>{{ result.marks }}</td>
+          <td>
+            <button
+              class="btn btn-warning btn-sm"
+              (click)="editResults(result.id)"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-danger btn-sm"
+              (click)="deleteResult(result.id)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
